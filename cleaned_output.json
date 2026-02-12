@@ -1,0 +1,18 @@
+[
+    {
+        "filename": "test1.pdf",
+        "cleaned_resume": "Raw text from c:/users/lenovo/onedrive/desktop/resume_project\\test1.pdf"
+    },
+    {
+        "filename": "test2.pdf",
+        "cleaned_resume": "Raw text from c:/users/lenovo/onedrive/desktop/resume_project\\test2.pdf"
+    },
+    {
+        "filename": "test3.pdf",
+        "cleaned_resume": "Raw text from c:/users/lenovo/onedrive/desktop/resume_project\\test3.pdf"
+    },
+    {
+        "filename": "test4.pdf",
+        "cleaned_resume": "Raw text from c:/users/lenovo/onedrive/desktop/resume_project\\test4.pdf"
+    }
+]
