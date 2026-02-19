@@ -20,8 +20,23 @@ with open('cleaned_output.json', 'r') as f:
 
 print("\n--- Reading from SQL Table ---")
 cursor.execute("SELECT filename, content FROM cleaned_resumes")
-rows = cursor.fetchall()
+all_rows = cursor.fetchall()
 
+cursor.execute("SELECT filename, content FROM cleaned_resumes")
+all_rows = cursor.fetchall()
+
+# 2. Each file's full cleaned content will be saved in a separate text file for easy viewing
+for row in all_rows:
+    
+    view_filename = row[0].replace(".pdf", "_FULL_VIEW.txt")
+    
+    with open(view_filename, 'w', encoding='utf-8') as f:
+        f.write(f"--- FULL CLEANED CONTENT OF {row[0]} ---\n")
+        f.write("="*60 + "\n\n")
+        f.write(row[1]) # full cleaned content
+        f.write("\n\n" + "="*60)
+        
+    print(f"success {view_filename} ready.")
 from tabulate import tabulate 
 
 cursor.execute("SELECT id, filename, content FROM cleaned_resumes")
